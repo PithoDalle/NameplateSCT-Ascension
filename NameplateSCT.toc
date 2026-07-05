@@ -11,6 +11,7 @@
 ## X-Email: bkader@mail.com
 ## X-Website: https://github.com/bkader/NameplateSCT_WoTLK
 ## X-Discord: https://discord.gg/a8z5CyS3eW
+## Pitho for Ascension Support
 
 Libs\Libs.xml
 Locales\Locale.xml

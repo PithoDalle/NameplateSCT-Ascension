@@ -510,11 +510,15 @@ do
 		end
 
 		local healthBar = self.plateChildren[frame].healthBar
-		if healthBar and not self.healthOnValueChangedHooks[frame] then
-			self.healthOnValueChangedHooks[frame] = true
-			healthBar:HookScript("OnValueChanged", ourHealthOnValueChanged)
-		end
-	end
+        if healthBar and not self.healthOnValueChangedHooks[frame] then
+            self.healthOnValueChangedHooks[frame] = true
+            
+            -- Support for Turboplates.
+            if healthBar:HasScript("OnValueChanged") then
+                healthBar:HookScript("OnValueChanged", ourHealthOnValueChanged)
+            end
+        end
+    end
 end
 
 do
